@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transmettre à Muco – Guide des legs et testament</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #37465A;
+      background: #fff;
+      font-size: 15px;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─────────────────────────────────────────────────────────────
+       NL BAR — bande top avec bouton NL aligné à droite
+    ───────────────────────────────────────────────────────────── */
+    .nl-bar {
+      width: 100%;
+      min-height: 63px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10px 24px;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 20;
+    }
+
+    .lang-btn {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #6B9D54;
+      background: #f1f2de;
+      border: 2px solid #6B9D54;
+      padding: 0.35rem 0.75rem;
+      border-radius: 7px;
+      cursor: pointer;
+      line-height: 1;
+      transition: background 0.15s, color 0.15s;
+      display: inline-block;
+    }
+    .lang-btn:hover { background: #6B9D54; color: #fff; }
+
+    /* ─────────────────────────────────────────────────────────────
+       HERO — full width, split layout
+    ───────────────────────────────────────────────────────────── */
+    .hero {
+      display: flex;
+      min-height: 935px;
+    }
+
+    /* LEFT — form panel */
+    .hero-form {
+      flex: 0 0 40%;
+      background: #eef0ef;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-form-header {
+      background: #6B9D54;
+      color: #fff;
+      text-align: center;
+      padding: 20px 24px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero-form-body {
+      padding: 22px 32px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .form-group {
+      margin-bottom: 8px;
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      border: 1px solid #c4cdd3;
+      border-radius: 3px;
+      padding: 9px 12px;
+      font-size: 0.8125rem;
+      font-family: 'Open Sans', sans-serif;
+      color: #37465A;
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-group select:focus,
+    .form-group input:focus { border-color: #6B9D54; }
+
+    .form-group select {
+      appearance: none;
+      background-image: url('https://adfinitas.b-cdn.net/muco/lp/select-arrow-drop-down.png');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 13px;
+      background-color: #fff;
+      cursor: pointer;
+      color: #9aa5ae;
+    }
+    .form-group select option { color: #37465A; }
+
+    .radio-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #5E6C7B;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      margin-top: 2px;
+      display: block;
+    }
+    .radio-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 14px;
+    }
+    .radio-row label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8125rem;
+      color: #37465A;
+      cursor: pointer;
+    }
+    .radio-row input[type="radio"] {
+      accent-color: #6B9D54;
+      width: 15px; height: 15px;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      background: #FFDA4A;
+      color: #37465A;
+      border: none;
+      border-radius: 3px;
+      padding: 12px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-submit:hover { background: #f5cc1e; }
+    .btn-submit:active { transform: scale(0.99); }
+
+    .karine {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border-top: 1px solid #d8dee2;
+      padding-top: 14px;
+      margin-top: auto;
+    }
+    .karine img {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .karine-info {
+      font-size: 0.875rem;
+      color: #5E6C7B;
+      line-height: 1.65;
+    }
+    .karine-info strong { color: #37465A; font-size: 0.9rem; }
+    .karine-info a { color: #6B9D54; font-weight: 700; }
+
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 62% center;
+    }
+
+    .hero-logo {
+      position: absolute;
+      top: 28px;
+      left: 40px;
+      height: 65px;
+      width: 300px;
+      object-fit: contain;
+      object-position: left center;
+      z-index: 5;
+    }
+
+    /* RIGHT — photo */
+    .hero-photo {
+      flex: 1;
+      position: relative;
+      background: none;
+      overflow: hidden;
+    }
+
+    .hero-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom,
+          rgba(0,0,0,0.28) 0%,
+          rgba(0,0,0,0.02) 45%,
+          rgba(0,0,0,0.0)  55%,
+          rgba(0,0,0,0.55) 100%);
+    }
+
+    .hero-caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 40px;
+      right: 40px;
+      max-width: 380px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .hero-caption .pre {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 3.0625rem; /* 49px */
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .hero-caption .big {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 4.5625rem; /* 73px */
+      font-weight: 900;
+      color: #fcdd2e;
+      line-height: 1.0;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .hero-caption .rule {
+      display: block;
+      width: min(392px, 80%);
+      height: 1px;
+      background: #fcdd2e;
+      margin: 0 0 12px;
+    }
+
+    .hero-caption .sub {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.625rem; /* 26px */
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    /* ─────────────────────────────────────────────────────────────
+       TEXT SECTION
+    ───────────────────────────────────────────────────────────── */
+    .text-section {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 72px 48px 64px;
+      text-align: center;
+    }
+
+    .text-section h2 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #6B9D54;
+      line-height: 1.2;
+      margin-bottom: 28px;
+    }
+
+    .text-section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #37465A;
+      margin-bottom: 16px;
+    }
+    .text-section p:last-child { margin-bottom: 0; }
+    .text-section strong { font-weight: 700; }
+
+    /* ─────────────────────────────────────────────────────────────
+       FAQ SECTION
+    ───────────────────────────────────────────────────────────── */
+    .faq-section {
+      background: #EEF0EF;
+      padding: 72px 48px 80px;
+    }
+
+    .faq-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .faq-inner > h2 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6B9D54;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .faq-intro {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #37465A;
+      margin-bottom: 28px;
+      max-width: 660px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #cdd6da;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #6B9D54;
+      line-height: 1.5;
+      transition: background 0.1s;
+    }
+    .faq-q:hover { background: #fafcf9; }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      color: #6B9D54;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(180deg); }
+
+    .faq-a {
+      display: none;
+      padding: 4px 20px 18px;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: #37465A;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ─────────────────────────────────────────────────────────────
+       CTA SECTION
+    ───────────────────────────────────────────────────────────── */
+    .cta-section {
+      padding: 72px 48px 80px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6B9D54;
+      margin-bottom: 10px;
+    }
+
+    .cta-section p {
+      font-size: 1.0625rem;
+      color: #37465A;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background: #FFDA4A;
+      color: #37465A;
+      border: none;
+      border-radius: 3px;
+      padding: 14px 32px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-cta:hover { background: #f5cc1e; }
+
+    /* ─────────────────────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────────────────────── */
+    footer {
+      background: #6B9D54;
+      color: #fff;
+      text-align: center;
+      padding: 48px 24px 40px;
+    }
+
+    footer img {
+      height: 42px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    footer p {
+      font-size: 0.875rem;
+      line-height: 2;
+      color: rgba(255,255,255,0.9);
+    }
+    footer strong { color: #fff; font-size: 0.9375rem; }
+
+    footer a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: underline;
+    }
+    footer a:hover { color: #fff; }
+
+    .footer-cookies {
+      margin-top: 16px;
+      font-size: 0.75rem;
+    }
+
+    /* ─────────────────────────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; max-height: none; min-height: auto; }
+      .hero-form { flex: none; }
+      .hero-photo { min-height: 420px; }
+      .site-header { padding: 18px 24px; }
+      .hero-caption { left: 28px; bottom: 32px; }
+      .hero-caption .big { font-size: clamp(3rem, 12vw, 5rem); }
+      .text-section, .faq-section, .cta-section { padding-left: 24px; padding-right: 24px; }
+    }
+
+    @media (max-width: 560px) {
+      .hero-form { flex: none; }
+      .hero-logo { height: 32px; }
+      .text-section h2, .faq-inner > h2, .cta-section h2 { font-size: 1.625rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NL BAR ──────────────────────────────────────────────────── -->
+  <div class="nl-bar">
+    <a class="lang-btn" href="#">NL</a>
+  </div>
+
+  <!-- ── HERO ────────────────────────────────────────────────────── -->
+  <section class="hero">
+
+    <!-- LEFT: form -->
+    <div class="hero-form">
+      <div class="hero-form-header">
+        OBTENIR DE LA DOCUMENTATION<br />À PROPOS DES LEGS SOLIDAIRES
+      </div>
+      <div class="hero-form-body">
+        <form>
+          <div class="form-group">
+            <select name="civilite">
+              <option value="">Civilité</option>
+              <option>Madame</option>
+              <option>Monsieur</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" name="nom" placeholder="Nom" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="prenom" placeholder="Prénom" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="adresse" placeholder="Adresse" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="cp" placeholder="Code postal" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="ville" placeholder="Ville" />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <input type="tel" name="telephone" placeholder="Téléphone" />
+          </div>
+
+          <span class="radio-label">Je souhaite recevoir des informations</span>
+          <div class="radio-row">
+            <label><input type="radio" name="channel" value="courrier" /> Par courrier</label>
+            <label><input type="radio" name="channel" value="email" /> Par email</label>
+          </div>
+
+          <button type="submit" class="btn-submit">JE VALIDE</button>
+        </form>
+
+        <div class="karine">
+          <img src="https://adfinitas.b-cdn.net/muco/lp/65604586-0-karine1-224x300.jpg" alt="Karine van Baren" />
+          <div class="karine-info">
+            Contactez <strong>Karine van Baren</strong>, Responsable des Legs, qui se fera un plaisir de répondre à vos questions.<br />
+            Tél&nbsp;: <a href="tel:+3226633908"><strong>02/663 39 08</strong></a><br />
+            E-mail&nbsp;: <a href="mailto:karine@muco.be"><strong>karine@muco.be</strong></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: photo -->
+    <div class="hero-photo">
+      <img class="hero-bg-img"
+           src="https://adfinitas.b-cdn.net/muco/lp/1772550089-65664298-1223x934x1223x934x0x0-AdobeStock-211845854.jpg"
+           alt="" />
+      <img class="hero-logo"
+           src="https://adfinitas.b-cdn.net/muco/lp/65604445-0-logo-muco-white.svg"
+           alt="Association Muco" />
+      <div class="hero-caption">
+        <span class="pre">Noah<br />voudrait juste</span>
+        <span class="big">GRANDIR</span>
+        <span class="rule"></span>
+        <span class="sub">Et si votre legs faisait disparaître la mucoviscidose&nbsp;?</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── TEXT SECTION ────────────────────────────────────────────── -->
+  <section class="text-section">
+    <h2>L'Association Muco a besoin de votre soutien</h2>
+    <p>La mucoviscidose est la maladie génétique grave la plus courante en Belgique.
+    <strong>Elle reste à ce jour incurable.</strong></p>
+    <p>L'Association Muco accompagne et soutient les enfants et adultes atteints de mucoviscidose en Belgique tout en finançant des projets de recherche porteurs d'espoir.</p>
+    <p>En rédigeant un testament en faveur de l'<strong>Association Muco</strong>, vous améliorez la qualité de vie et augmentez l'espérance de vie de <strong>1&nbsp;397 Belges atteints de mucoviscidose</strong>. Grâce à vous, des enfants pourront grandir plus sereinement et peut-être un jour <strong>vivre dans un monde sans mucoviscidose</strong>.</p>
+  </section>
+
+  <!-- ── FAQ SECTION ─────────────────────────────────────────────── -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <h2>Faire un legs à l'Association Muco&nbsp;: Quelles sont les erreurs les plus fréquentes en matière de testament&nbsp;?</h2>
+      <p class="faq-intro">Rédiger son testament est une étape importante dans une vie. Pourtant nombreux sont ceux qui hésitent à consulter un expert… Cela peut malheureusement entraîner des erreurs et compromettre le respect des dernières volontés du testateur. Voici quelques exemples concrets&nbsp;:</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            <span>Marie et Bernard ont longtemps vécu en concubinage. Récemment mariés, ils ont rédigé un testament commun pour préciser leurs volontés à leurs enfants. Ont-ils eu raison&nbsp;?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Leur intention est généreuse, mais leur testament ne sera pas valide. Un testament ne peut être partagé, il est obligatoire d'en rédiger un par personne. Pour en savoir plus, demandez notre documentation.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            <span>Jean a fait rédiger son testament par un notaire. Quelques années plus tard, il souhaite y apporter des précisions, qu'il partage dans une vidéo. Ces instructions seront-elles prises en compte&nbsp;?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Malheureusement, non. Même si les héritiers peuvent choisir de respecter ses paroles, une vidéo n'a aucune valeur juridique. Un testament n'est valable que s'il est rédigé sur papier.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            <span>Bénédicte est veuve. Elle souhaite léguer la majorité de ses biens à sa fille adorée, mais aimerait aussi faire un geste en faveur de notre association. Est-ce possible&nbsp;?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">Absolument. Si la loi protège les héritiers légaux, il est tout à fait possible de léguer une partie de ses biens à une cause qui nous tient à cœur.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA SECTION ─────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <h2>Vous souhaitez en savoir plus&nbsp;?</h2>
+    <p>Demandez notre brochure legs dès aujourd'hui</p>
+    <button class="btn-cta" onclick="document.querySelector('.hero-form').scrollIntoView({behavior:'smooth'})">JE DEMANDE LE GUIDE DES LEGS</button>
+  </section>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+  <footer>
+    <img src="https://adfinitas.b-cdn.net/muco/lp/65604445-0-logo-muco-white.svg" alt="Association Muco" />
+    <p>
+      <strong>Association Muco</strong><br />
+      Association Belge de Lutte contre la Mucoviscidose<br />
+      <a href="tel:+3226755769">02 675 57 69</a>&ensp;|&ensp;<a href="mailto:info@muco.be">info@muco.be</a><br />
+      Rue des Trois Ponts 124, 1160 Bruxelles<br />
+      BE62 5230 8010 1261 (BIC: TRIOBEBB)
+    </p>
+    <p class="footer-cookies"><a href="#">Gestion des cookies</a></p>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
