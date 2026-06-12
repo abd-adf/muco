@@ -503,7 +503,7 @@
         OBTENIR DE LA DOCUMENTATION<br />À PROPOS DES LEGS SOLIDAIRES
       </div>
       <div class="hero-form-body">
-        <form>
+        <form name="demande-documentation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <div class="form-group">
             <select name="civilite">
               <option value="">Civilité</option>
@@ -532,6 +532,16 @@
           <div class="form-group">
             <input type="tel" name="telephone" placeholder="Téléphone" />
           </div>
+
+          <!-- Honeypot anti-spam (caché) -->
+          <p style="display:none;">
+            <label>Ne pas remplir : <input name="bot-field" /></label>
+          </p>
+
+          <!-- UTM hidden fields -->
+          <input type="hidden" name="utm_source" value="" />
+          <input type="hidden" name="utm_medium" value="" />
+          <input type="hidden" name="utm_content" value="" />
 
           <span class="radio-label">Je souhaite recevoir des informations</span>
           <div class="radio-row">
@@ -643,6 +653,18 @@
       document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     }
+
+    // Parse UTM parameters from URL and populate hidden fields
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      ['utm_source', 'utm_medium', 'utm_content'].forEach(function(key) {
+        const value = params.get(key);
+        if (value) {
+          const field = document.querySelector('input[name="' + key + '"]');
+          if (field) field.value = value;
+        }
+      });
+    })();
   </script>
 
 </body>
