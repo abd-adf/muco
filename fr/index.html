@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nalaten aan Muco – Gids over legaten en testamenten</title>
+  <title>Transmettre à Muco – Guide des legs et testament</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -22,7 +22,7 @@
     a { text-decoration: none; color: inherit; }
 
     /* ─────────────────────────────────────────────────────────────
-       NL BAR — bande top avec bouton FR aligné à droite
+       NL BAR — bande top avec bouton NL aligné à droite
     ───────────────────────────────────────────────────────────── */
     .nl-bar {
       width: 100%;
@@ -489,9 +489,9 @@
 </head>
 <body>
 
-  <!-- ── LANG BAR ──────────────────────────────────────────────────── -->
+  <!-- ── NL BAR ──────────────────────────────────────────────────── -->
   <div class="nl-bar">
-    <a class="lang-btn" href="/fr/">FR</a>
+    <a class="lang-btn" href="/">NL</a>
   </div>
 
   <!-- ── HERO ────────────────────────────────────────────────────── -->
@@ -500,42 +500,42 @@
     <!-- LEFT: form -->
     <div class="hero-form">
       <div class="hero-form-header">
-        MEER WETEN OVER NALATEN<br />IK WIL GRAAG INFORMATIE ONTVANGEN
+        OBTENIR DE LA DOCUMENTATION<br />À PROPOS DES LEGS SOLIDAIRES
       </div>
       <div class="hero-form-body">
-        <form name="aanvraag-documentatie" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="demande-documentation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <div class="form-group">
-            <select name="aanhef">
-              <option value="">Aanhef</option>
-              <option>Mevrouw</option>
-              <option>Meneer</option>
+            <select name="civilite">
+              <option value="">Civilité</option>
+              <option>Madame</option>
+              <option>Monsieur</option>
             </select>
           </div>
           <div class="form-group">
-            <input type="text" name="naam" placeholder="Naam" />
+            <input type="text" name="nom" placeholder="Nom" />
           </div>
           <div class="form-group">
-            <input type="text" name="voornaam" placeholder="Voornaam" />
+            <input type="text" name="prenom" placeholder="Prénom" />
           </div>
           <div class="form-group">
-            <input type="text" name="adres" placeholder="Adres" />
+            <input type="text" name="adresse" placeholder="Adresse" />
           </div>
           <div class="form-group">
-            <input type="text" name="postcode" placeholder="Postcode" />
+            <input type="text" name="cp" placeholder="Code postal" />
           </div>
           <div class="form-group">
-            <input type="text" name="stad" placeholder="Stad" />
+            <input type="text" name="ville" placeholder="Ville" />
           </div>
           <div class="form-group">
             <input type="email" name="email" placeholder="Email" />
           </div>
           <div class="form-group">
-            <input type="tel" name="telefoon" placeholder="Telefoon" />
+            <input type="tel" name="telephone" placeholder="Téléphone" />
           </div>
 
-          <!-- Honeypot anti-spam (verborgen) -->
+          <!-- Honeypot anti-spam (caché) -->
           <p style="display:none;">
-            <label>Niet invullen : <input name="bot-field" /></label>
+            <label>Ne pas remplir : <input name="bot-field" /></label>
           </p>
 
           <!-- UTM hidden fields -->
@@ -543,20 +543,20 @@
           <input type="hidden" name="utm_medium" id="utm_medium" value="" />
           <input type="hidden" name="utm_content" id="utm_content" value="" />
 
-          <span class="radio-label">Stuur mij de Legatenbrochure</span>
+          <span class="radio-label">Je souhaite recevoir des informations</span>
           <div class="radio-row">
-            <label><input type="radio" name="channel" value="post" /> Per post</label>
-            <label><input type="radio" name="channel" value="email" /> Via email</label>
+            <label><input type="radio" name="channel" value="courrier" /> Par courrier</label>
+            <label><input type="radio" name="channel" value="email" /> Par email</label>
           </div>
 
-          <button type="submit" class="btn-submit">Ik bevestig deze aanvraag</button>
+          <button type="submit" class="btn-submit">JE VALIDE</button>
         </form>
 
         <div class="karine">
           <img src="https://adfinitas.b-cdn.net/muco/lp/65604586-0-karine1-224x300.jpg" alt="Karine van Baren" />
           <div class="karine-info">
-            Neem contact op met <strong>Karine van Baren</strong>, Verantwoordelijke Legaten. Zij helpt u graag verder met al uw vragen.<br />
-            Tel&nbsp;: <a href="tel:+3226633908"><strong>02/663 39 08</strong></a><br />
+            Contactez <strong>Karine van Baren</strong>, Responsable des Legs, qui se fera un plaisir de répondre à vos questions.<br />
+            Tél&nbsp;: <a href="tel:+3226633908"><strong>02/663 39 08</strong></a><br />
             E-mail&nbsp;: <a href="mailto:karine@muco.be"><strong>karine@muco.be</strong></a>
           </div>
         </div>
@@ -570,12 +570,12 @@
            alt="" />
       <img class="hero-logo"
            src="https://adfinitas.b-cdn.net/muco/lp/65604445-0-logo-muco-white.svg"
-           alt="Mucovereniging" />
+           alt="Association Muco" />
       <div class="hero-caption">
-        <span class="pre">Noah wil</span>
-        <span class="big">GROOT zijn</span>
+        <span class="pre">Noah<br />voudrait juste</span>
+        <span class="big">GRANDIR</span>
         <span class="rule"></span>
-        <span class="sub">En als uw legaat mucoviscidose kon verslaan&nbsp;?</span>
+        <span class="sub">Et si votre legs faisait disparaître la mucoviscidose&nbsp;?</span>
       </div>
     </div>
 
@@ -583,43 +583,43 @@
 
   <!-- ── TEXT SECTION ────────────────────────────────────────────── -->
   <section class="text-section">
-    <h2>De Mucovereniging heeft uw steun nodig</h2>
-    <p>Mucoviscidose is de meest voorkomende ernstige genetische aandoening in België.
-    <br><strong>Tot op vandaag blijft muco ongeneeslijk.</strong></p>
-    <p>Daarom begeleidt en steunt de Mucovereniging kinderen en volwassenen met mucoviscidose in België, terwijl ze hoopgevende onderzoeksprojecten financiert.</p>
-    <p>Door een testament op te stellen ten voordele van de <strong>Mucovereniging</strong>, verbetert u de levenskwaliteit en verhoogt u de levensverwachting van <strong>1&nbsp;397 Belgen met mucoviscidose</strong>.<br><br>Dankzij u kunnen kinderen met minder zorgen opgroeien en misschien op een dag <strong>leven in een wereld zonder mucoviscidose</strong>.</p>
+    <h2>L'Association Muco a besoin de votre soutien</h2>
+    <p>La mucoviscidose est la maladie génétique grave la plus courante en Belgique.
+    <br><strong>Elle reste à ce jour incurable.</strong></p>
+    <p>L'Association Muco accompagne et soutient les enfants et adultes atteints de mucoviscidose en Belgique tout en finançant des projets de recherche porteurs d'espoir.</p>
+    <p>En rédigeant un testament en faveur de l'<strong>Association Muco</strong>, vous améliorez la qualité de vie et augmentez l'espérance de vie de <strong>1&nbsp;397 Belges atteints de mucoviscidose</strong>.<br><br>Grâce à vous, des enfants pourront grandir plus sereinement et peut-être un jour <strong>vivre dans un monde sans mucoviscidose</strong>.</p>
   </section>
 
   <!-- ── FAQ SECTION ─────────────────────────────────────────────── -->
   <section class="faq-section">
     <div class="faq-inner">
-      <h2>Een legaat nalaten aan de Mucovereniging&nbsp;: Wat zijn de meest voorkomende fouten bij het opstellen van een testament&nbsp;?</h2>
-      <p class="faq-intro">Een testament opstellen is een belangrijke mijlpaal in uw leven. Toch aarzelen veel mensen om professioneel advies in te winnen. Helaas kan dat leiden tot fouten, waardoor de laatste wensen van de erflater niet worden gerespecteerd. Hieronder vindt u enkele concrete voorbeelden&nbsp;:</p>
+      <h2>Faire un legs à l'Association Muco&nbsp;: Quelles sont les erreurs les plus fréquentes en matière de testament&nbsp;?</h2>
+      <p class="faq-intro">Rédiger son testament est une étape importante dans une vie. Pourtant nombreux sont ceux qui hésitent à consulter un expert… Cela peut malheureusement entraîner des erreurs et compromettre le respect des dernières volontés du testateur. Voici quelques exemples concrets&nbsp;:</p>
 
       <div class="faq-list">
 
         <div class="faq-item">
           <button class="faq-q" type="button" onclick="toggleFaq(this)">
-            <span>Marie en Bernard wonen al jaren samen. Ze zijn onlangs getrouwd en hebben een gezamenlijk testament opgesteld om hun wensen neer te schrijven voor hun kinderen. Was dit een goed idee&nbsp;?</span>
+            <span>Marie et Bernard ont longtemps vécu en concubinage. Récemment mariés, ils ont rédigé un testament commun pour préciser leurs volontés à leurs enfants. Ont-ils eu raison&nbsp;?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">Hun intentie was goed maar hun testament is niet rechtsgeldig. Een testament mag niet gezamenlijk worden opgesteld. Iedereen moet een eigen testament opmaken. Meer weten? Vraag onze brochure aan.</div>
+          <div class="faq-a">Leur intention est généreuse, mais leur testament ne sera pas valide. Un testament ne peut être partagé, il est obligatoire d'en rédiger un par personne. Pour en savoir plus, demandez notre documentation.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button" onclick="toggleFaq(this)">
-            <span>Jan liet zijn testament opmaken bij de notaris. Enkele jaren later wil hij enkele zaken aanpassen. Hij spreekt zijn wensen uit en maakt er een video-opname van. Wordt er rekening gehouden met deze aanvullingen&nbsp;?</span>
+            <span>Jean a fait rédiger son testament par un notaire. Quelques années plus tard, il souhaite y apporter des précisions, qu'il partage dans une vidéo. Ces instructions seront-elles prises en compte&nbsp;?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">Helaas niet. Een video heeft geen enkele juridische waarde, ook al zouden de erfgenamen zijn wensen willen respecteren. Een testament is enkel geldig als het met de hand geschreven, gedateerd en ondertekend is. Meer weten? Vraag onze brochure aan.</div>
+          <div class="faq-a">Malheureusement, non. Même si les héritiers peuvent choisir de respecter ses paroles, une vidéo n'a aucune valeur juridique. Un testament n'est valable que s'il est rédigé sur papier.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button" onclick="toggleFaq(this)">
-            <span>Denise is weduwe. Ze wil het grootste deel van haar bezittingen nalaten aan haar dochter, maar wil ook graag doneren aan de Mucovereniging. Kan dat&nbsp;?</span>
+            <span>Bénédicte est veuve. Elle souhaite léguer la majorité de ses biens à sa fille adorée, mais aimerait aussi faire un geste en faveur de notre association. Est-ce possible&nbsp;?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-a">Absoluut. De wet beschermt de wettelijke erfgenamen, maar het is perfect mogelijk om een deel van de erfenis te schenken aan een goed doel dat u nauw aan het hart ligt. Meer weten over de mogelijkheden om uw erfenis te verdelen? Vraag onze brochure aan.</div>
+          <div class="faq-a">Absolument. Si la loi protège les héritiers légaux, il est tout à fait possible de léguer une partie de ses biens à une cause qui nous tient à cœur.</div>
         </div>
 
       </div>
@@ -628,22 +628,22 @@
 
   <!-- ── CTA SECTION ─────────────────────────────────────────────── -->
   <section class="cta-section">
-    <h2>Wil u er meer over weten&nbsp;?</h2>
-    <p>Vraag vandaag nog onze brochure over legaten aan.</p>
-    <button class="btn-cta" onclick="document.querySelector('.hero-form').scrollIntoView({behavior:'smooth'})">IK VRAAG DE BROCHURE OVER LEGATEN AAN</button>
+    <h2>Vous souhaitez en savoir plus&nbsp;?</h2>
+    <p>Demandez notre brochure legs dès aujourd'hui</p>
+    <button class="btn-cta" onclick="document.querySelector('.hero-form').scrollIntoView({behavior:'smooth'})">JE DEMANDE LE GUIDE DES LEGS</button>
   </section>
 
   <!-- ── FOOTER ──────────────────────────────────────────────────── -->
   <footer>
-    <img src="https://adfinitas.b-cdn.net/muco/lp/65604445-0-logo-muco-white.svg" alt="Mucovereniging" />
+    <img src="https://adfinitas.b-cdn.net/muco/lp/65604445-0-logo-muco-white.svg" alt="Association Muco" />
     <p>
-      <strong>Mucovereniging</strong><br />
-      Belgische Vereniging voor Strijd tegen Mucoviscidose<br />
+      <strong>Association Muco</strong><br />
+      Association Belge de Lutte contre la Mucoviscidose<br />
       <a href="tel:+3226755769">02 675 57 69</a>&ensp;|&ensp;<a href="mailto:info@muco.be">info@muco.be</a><br />
-      Driebruggenstraat 124, 1160 Brussel<br />
+      Rue des Trois Ponts 124, 1160 Bruxelles<br />
       BE62 5230 8010 1261 (BIC: TRIOBEBB)
     </p>
-    <p class="footer-cookies"><a href="#">Cookiebeheer</a></p>
+    <p class="footer-cookies"><a href="#">Gestion des cookies</a></p>
   </footer>
 
   <script>
